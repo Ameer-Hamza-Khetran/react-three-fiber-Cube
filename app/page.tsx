@@ -1,8 +1,6 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
+import { Cube } from "@/app/components/cube";
 export default function Home() {
   return (
-    <div>Starting react three fiber</div>
+    <Cube/>
   )
 }
