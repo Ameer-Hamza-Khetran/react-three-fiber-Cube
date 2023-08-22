@@ -1,6 +1,6 @@
-import { Cube } from "@/app/components/cube";
+import MyCanvas from "@/app/components/cube";
 export default function Home() {
   return (
-    <Cube/>
+    <MyCanvas/>
   )
 }
