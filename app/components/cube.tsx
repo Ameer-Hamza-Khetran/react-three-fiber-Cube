@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
-import { Box } from "@chakra-ui/react";
+import { Box, background } from "@chakra-ui/react";
 
 function Cube() {
     const meshRef = useRef<Mesh>(null!);
@@ -24,9 +24,15 @@ function Cube() {
 }
 
 export default function MyCanvas() {
+    useEffect(() => {
+       
+    }, []);
     return (
         <Box width={'full'} height={'100vh'}>
-            <Canvas camera={{ position: [0, 0, 5], near: 0.1, far: 100 }}>
+            <Canvas 
+                camera={{ position: [0, 0, 5], near: 0.1, far: 100 }}
+                style={{background: "#1e1e1e"}}
+            >
                 <ambientLight intensity={0.1} />
                 <directionalLight color={'#5A5A5A'} position={[0, 0, 10]} />
                 <Cube />
